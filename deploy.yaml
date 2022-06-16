@@ -15,3 +15,6 @@ spec:
       containers:
       - name: ng
         image: nginx:1.19.6
+        resources:
+          limits:
+            cpu: 20m

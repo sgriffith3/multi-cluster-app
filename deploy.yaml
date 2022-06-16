@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: multicluster
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: multicluster
+  template:
+    metadata:
+      labels:
+        app: multicluster
+    spec:
+      containers:
+      - name: ng
+        image: nginx:1.19.6
